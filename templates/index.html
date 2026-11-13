@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scam Alert</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+
+<body>
+    <div class="language-selector">
+        <label for="languageSelect">Language / ቋንቋ:</label>
+        <select id="languageSelect">
+            <option value="en">English</option>
+            <option value="am">አማርኛ</option>
+        </select>
+    </div>
+
+    <h1>Scam Alert</h1>
+
+    <p data-translate="tagline">Your digital safety matters.</p>
+
+    <h2 data-translate="heading">Check suspicious content</h2>
+
+    <textarea
+        id="messageInput"
+        data-placeholder="messagePlaceholder"
+        placeholder="Paste a suspicious message here"></textarea>
+
+    <input
+        type="text"
+        id="linkInput"
+        data-placeholder="linkPlaceholder"
+        placeholder="Paste a suspicious link here">
+
+    <br><br>
+
+    <label for="imageInput" data-translate="imageLabel">
+        Or upload a screenshot:
+    </label>
+
+    <br><br>
+
+    <input type="file" id="imageInput" accept="image/*">
+
+    <br><br>
+
+    <button type="button" id="analyzeButton" data-translate="analyze">
+        Analyze
+    </button>
+
+    <div id="result"></div>
+    
+<div class="ethics-notice">
+    <h2>⚠️ A Reminder About Ethical Use</h2>
+
+    <h3>Technology is a tool. How we use it is our responsibility.</h3>
+
+    <p>Scam Alert is designed to promote online safety.
+    Please use it responsibly and ethically.</p>
+
+    <ul>
+        <li><strong>Use it to protect, not deceive.</strong></li>
+        <li><strong>Respect others' privacy.</strong> Protect personal information and respect people's rights.</li>
+        <li><strong>Think before you share.</strong> Avoid spreading suspicious messages or unverified information.</li>
+        <li><strong>Be responsible online.</strong> Use technology to create awareness and promote digital safety.</li>
+    </ul>
+
+    <p><strong>Remember:</strong> The goal of technology should be to make the digital world safer.</p>
+
+    <p><em>Stay alert. Stay ethical. Stay responsible.</em></p>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js')}}"></script>
+</body>
+</html>
