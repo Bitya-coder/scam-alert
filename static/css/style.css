@@ -1,7 +1,9 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #061A16, #0B2B24, #350078, #210044);
+    background: linear-gradient(135deg, #061A16 0%, #0B2B24 35%, #350078 75%, #210044 100%);
+    background-size: 100% 100vh;
+    background-repeat: repeat-y;
     color: white;
     min-height: 100vh;
 }
@@ -121,6 +123,16 @@ button:hover {
         max-width: 90%;
         font-size: 15px;
     }
+
+    .language-selector {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: fit-content;
+        margin: 15px auto;
+        justify-content: center;
+        font-size: 14px;
+    }
 }
 
 textarea::placeholder,
@@ -219,4 +231,21 @@ input[type="file"]::file-selector-button:hover {
     text-align: center;
     color: #00c6ff;
     font-weight: bold;
+}
+
+/* MOBILE LANGUAGE BUTTON FIX */
+@media screen and (max-width: 600px) {
+    .language-selector {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        display: flex;
+        width: fit-content;
+        max-width: 95%;
+        margin: 15px auto 25px;
+        box-sizing: border-box;
+        justify-content: center;
+        font-size: 14px;
+    }
 }
