@@ -145,13 +145,17 @@ input[type="text"]::placeholder {
 }
 
 .language-selector {
-    position: absolute;
-    top: 20px;
-    right: 25px;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
+    width: fit-content;
+    max-width: 95%;
+    margin: 20px auto;
     padding: 10px 14px;
+    box-sizing: border-box;
     background: #18002f;
     border: 1px solid #9d4edd;
     border-radius: 10px;
